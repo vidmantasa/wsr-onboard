@@ -1,0 +1,14 @@
+[
+  {
+    "appName": "wsr-vidas-onboard.pages.index",
+    "notifications": {
+      "slack_channels": [
+        "wsr-vidas-onboard-urgent"
+      ]
+    },
+    "deploy_annotations": [
+      "wsr-vidas-onboard"
+    ],
+    "ignore_first_request_roundtrip": true
+  }
+]

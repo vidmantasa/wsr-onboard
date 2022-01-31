@@ -1,0 +1,21 @@
+{
+  "$schema": "target/schemas/.application.schema.json",
+  "moduleId": "WSR_VIDAS_ONBOARD",
+  "appDefinitionId": "75cbd3f2-9489-42ee-890b-01942af59312",
+  "isCoreService": true,
+  "routeNamespace": "wsr-vidas-onboard",
+  "translations": {
+    "enabled": true
+  },
+  "sentry": {
+    "DSN": "https://34448b4f99e144e68ff88b15c934e514@sentry.wixpress.com/2822",
+    "id": "34448b4f99e144e68ff88b15c934e514",
+    "projectName": "wsr-vidas-onboard",
+    "teamName": "wsr-vidas-onboarding",
+    "errorMonitor": true
+  },
+  "experiments": {
+    "centralized": true
+  },
+  "enabledByExperiments": ["specs.infra.yoshi-bm.ChangeMe"]
+}
