@@ -3,7 +3,8 @@
   "include": [
     "__tests__",
     "src",
-    "dev"
+    "dev",
+    "sled"
   ],
   "files": [
     "target/generated/flow-types.ts",

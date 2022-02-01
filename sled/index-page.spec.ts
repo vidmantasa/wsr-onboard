@@ -74,8 +74,6 @@ describe('happy flow', () => {
     });
     await radioGroupTestkit.selectByIndex(2);
 
-    expect(await radioGroupTestkit.getSelectedValue()).toEqual(
-      '1 a day in the first week',
-    );
+    expect(await radioGroupTestkit.getSelectedValue()).toEqual('3');
   });
 });
