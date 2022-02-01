@@ -1,4 +1,7 @@
 {
-  "app.title": "Hallo Wereld",
-  "app.get-started": "Get begonnen <1>hier</1>"
+  "app.title": "Moderationseinstellungen",
+  "app.spam-protection-title": "Spam protection with reCAPTCHA",
+  "app.spam-protection-subtitle": "Prevent spam by showing reCAPTCHA which gets people to prove they are human and not a robot.",
+  "app.cancel-action": "Cancel",
+  "app.save-action": "Save"
 }
