@@ -5,7 +5,7 @@
   "app.spam-protection-toggle-post-created": "Show when a post gets created",
   "app.spam-protection-toggle-comment-created": "Show when a comment gets created",
   "app.card-subtitle": "Prevent spam by showing reCAPTCHA which gets people to prove they are human and not a robot.",
-  "app.post-limiter-title": "Spam protection with reCAPTCHA",
+  "app.post-limiter-title": "Post Limiter",
   "app.post-limiter-radio-ten": "10 a day in the first week",
   "app.post-limiter-radio-five": "5 a day in the first week",
   "app.post-limiter-radio-one": "1 a day in the first week",

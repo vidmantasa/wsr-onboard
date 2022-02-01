@@ -37,6 +37,7 @@ const WordFilter: FC = () => {
                 infoContent={t('app.word-filter-spam-desc')}
               >
                 <InputArea
+                  dataHook="word-filter-hook"
                   placeholder={t('app.word-filter-spam-desc')}
                   rows={4}
                   maxLength={300}

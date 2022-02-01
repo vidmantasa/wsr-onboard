@@ -4,7 +4,11 @@
 // 2. Each spec file running 3 times in parallel!
 import { Page } from 'puppeteer';
 import { injectBMOverrides } from '@wix/yoshi-flow-bm/sled';
-import { TextTestkit } from 'wix-style-react/dist/testkit/puppeteer';
+import {
+  InputAreaTestkit,
+  PageHeaderTestkit,
+  RadioGroupTestkit,
+} from 'wix-style-react/dist/testkit/puppeteer';
 
 describe('happy flow', () => {
   let _page: Page;
@@ -42,13 +46,36 @@ describe('happy flow', () => {
     }
   });
 
-  it('should render dashboard home for authenticated user', async () => {
-    const textTestkit = await TextTestkit({
+  it('should render dashboard title for authenticated user', async () => {
+    const pageHeaderTestkit = await PageHeaderTestkit({
       page: _page,
-      dataHook: 'get-started',
+      dataHook: 'app-title',
     });
 
-    const text = await textTestkit.getText();
-    expect(text).toMatch(/Get started .+here.+/);
+    const text = await pageHeaderTestkit.titleText();
+    expect(text).toMatch('Moderation Settings');
+  });
+
+  it('should add words to word filter', async () => {
+    const inputAreaTestkit = await InputAreaTestkit({
+      page: _page,
+      dataHook: 'word-filter-hook',
+    });
+    const text = 'swear word';
+    await inputAreaTestkit.enterText(text);
+
+    expect(await inputAreaTestkit.getValue()).toEqual(text);
+  });
+
+  it('should change radio buttons on post limiter', async () => {
+    const radioGroupTestkit = await RadioGroupTestkit({
+      page: _page,
+      dataHook: 'post-limiter-radio-hook',
+    });
+    await radioGroupTestkit.selectByIndex(2);
+
+    expect(await radioGroupTestkit.getSelectedValue()).toEqual(
+      '1 a day in the first week',
+    );
   });
 });

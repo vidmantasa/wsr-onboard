@@ -23,6 +23,7 @@ const PostLimiter: FC = () => {
       <Collapse open={openPostLimiter}>
         <Card.Content>
           <RadioGroup
+            dataHook="post-limiter-radio-hook"
             value={radio}
             onChange={(value) => setRadio(Number(value))}
           >

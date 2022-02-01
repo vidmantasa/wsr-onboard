@@ -39,7 +39,7 @@ const WordFilterPermissions: FC = () => {
       />
       <Card.Divider />
       <Collapse open={openWordFilterPermissions}>
-        <Layout alignItems="flex-start">
+        <Layout>
           <Cell>
             <Box padding="30px 24px 0px 24px">
               <SectionHelper appearance="standard">
@@ -54,7 +54,7 @@ const WordFilterPermissions: FC = () => {
               </Text>
             </Box>
           </Cell>
-          <Cell>
+          <Cell span={12}>
             <Box paddingBottom="24px">
               <SelectableAccordion
                 type="radio"
@@ -66,31 +66,35 @@ const WordFilterPermissions: FC = () => {
                     title: t('app.word-filter-permissions-new-members-label'),
                     subtitle: t('app.word-filter-permissions-new-members-desc'),
                     content: (
-                      <>
-                        <FormField
-                          label={t(
-                            'app.word-filter-permissions-posts-kind-label',
-                          )}
-                          labelSize="small"
-                        >
-                          <Dropdown
-                            dataHook={postsDropdownHook}
-                            placeholder="Select"
-                            options={[{ id: 0, value: 'All Posts' }]}
-                          />
-                        </FormField>
-                        <FormField
-                          label={t(
-                            'app.word-filter-permissions-posts-count-label',
-                          )}
-                          labelSize="small"
-                        >
-                          <Dropdown
-                            placeholder="Select"
-                            options={[{ id: 0, value: '1 Post' }]}
-                          />
-                        </FormField>
-                      </>
+                      <Layout>
+                        <Cell>
+                          <FormField
+                            label={t(
+                              'app.word-filter-permissions-posts-kind-label',
+                            )}
+                            labelSize="small"
+                          >
+                            <Dropdown
+                              dataHook={postsDropdownHook}
+                              placeholder="Select"
+                              options={[{ id: 0, value: 'All Posts' }]}
+                            />
+                          </FormField>
+                        </Cell>
+                        <Cell>
+                          <FormField
+                            label={t(
+                              'app.word-filter-permissions-posts-count-label',
+                            )}
+                            labelSize="small"
+                          >
+                            <Dropdown
+                              placeholder="Select"
+                              options={[{ id: 0, value: '1 Post' }]}
+                            />
+                          </FormField>
+                        </Cell>
+                      </Layout>
                     ),
                   },
                   {
