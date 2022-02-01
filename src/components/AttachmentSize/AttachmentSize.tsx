@@ -12,7 +12,7 @@ import {
   ToggleSwitch,
 } from 'wix-style-react';
 
-export const sliderHook = 'silder-hook';
+export const sliderHook = 'slider-hook';
 export const inputHook = 'input-hook';
 
 const AttachmentSize: FC = () => {

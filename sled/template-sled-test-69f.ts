@@ -4,16 +4,13 @@ import { Page } from 'puppeteer-core';
 describe('happy flow', () => {
   let _page: Page;
 
-  const SLED_DEFAULT_MSID = 'eeaf3519-1406-45f0-a8ea-a59a4ecbc1a6';
-  const APP_ENTRY_POINT = 'home'; // FIXME - set your own bizmgr entry point URI
+  const SLED_DEFAULT_MSID = '986cc99b-760a-41b1-b7bb-bb951fd6b079';
+  const APP_ENTRY_POINT = 'wsr-vidas-onboard'; // FIXME - set your own bizmgr entry point URI
 
   beforeEach(async () => {
     const { page } = await sled.newPage();
     _page = page;
-    await sled.loginAsUser(
-      _page,
-      'wixqatest-set-your-own-user-in-garage@wix.com',
-    ); // FIXME - set your own automation user. Read more in article https://bo.wix.com/wix-docs/fe-guild/infra/sled/getting-started/users
+    await sled.loginAsUser(_page, 'wixqatest.sledcrashcourse@gmail.com'); // FIXME - set your own automation user. Read more in article https://bo.wix.com/wix-docs/fe-guild/infra/sled/getting-started/users
     await _page.goto(
       'https://www.wix.com/dashboard/' +
         SLED_DEFAULT_MSID +

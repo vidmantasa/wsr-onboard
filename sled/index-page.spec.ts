@@ -14,19 +14,15 @@ describe('happy flow', () => {
   beforeEach(async () => {
     const { page } = await sled.newPage({
       authType: 'free-user', // TODO: This is a shared user, Change that! See: https://bo.wix.com/wix-docs/fe-guild/infra/sled/getting-started/test-user
-
       experiments: [
         {
-          // TODO: Replace with your own experiment
-          // For more information, visit:
-          // https://bo.wix.com/pages/yoshi/docs/business-manager-flow/deployment#experiments
           key: 'specs.infra.yoshi-bm.ChangeMe',
           val: 'true',
         },
       ],
     });
 
-    _page = page;
+    _page = page as any;
 
     await injectBMOverrides({
       page,
